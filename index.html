@@ -7,6 +7,10 @@
     <!-- CSS -->
     <link rel="stylesheet" href="style.css" />
 
+    <!-- AOS -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" /> 
+
+
     <title>Portofilio | M. Rifki Denanda</title>
   </head>
   <body id="home">
@@ -47,20 +51,20 @@
 
     <!-- About Me -->
     <section id="about">
-      <div class="container">
+      <div class="container"> 
         <div class="row text-center mb-5">
-          <div class="col">
+          <div class="col" data-aos="fade-up" data-aos-duration="1500">
             <h2>About Me</h2>
           </div>
         </div>
         <div class="row justify-content-center fs-5 text-center">
-          <div class="col-md-4">
+          <div class="col-md-4" data-aos="fade-left" data-aos-duration="1500" data-aos-delay="250">
             <p>
               Hello! I am from Batam currently a final year at University of Ibnu Sina Batam, 
               majors of Technical Information, branch of Software Engineering. 
             </p>
           </div>
-          <div class="col-md-4">
+          <div class="col-md-4" data-aos="fade-right" data-aos-duration="1500" data-aos-delay="350">
             <p>
               Interesting about Web Developer, Machine Learning, and Digital Marketing. Experienced of being
               a IT Operational during an internship. 
@@ -78,13 +82,13 @@
     <section id="projects">
       <div class="container">
         <div class="row text-center mb-5">
-          <div class="col justify-content-center fs-5">
+          <div class="col justify-content-center fs-5" data-aos="fade-up" data-aos-duration="1500">
             <h2>My Experience</h2>
           </div>
         </div>
         <div class="row row-cols-1 row-cols-md-3 g-4 justify-content-center">
           <div class="col">
-            <div class="card h-100">
+            <div class="card h-100" data-aos="flip-left" data-aos-duration="3000" data-aos-delay="500">
               <img src="img/experience/contentwritter.jpg" class="card-img-top" alt="Content Writter" />
               <div class="card-body">
                 <h5 class="card-title text-center">Content Writer</h5>
@@ -96,7 +100,7 @@
             </div>
           </div>
           <div class="col">
-            <div class="card h-100">
+            <div class="card h-100" data-aos="flip-right" data-aos-duration="3000" data-aos-delay="500" >
               <img src="img/experience/citratubindo.jpeg" class="card-img-top" alt="Citra Tubindo" />
               <div class="card-body">
                 <h5 class="card-title text-center">Kampus Merdeka</h5>
@@ -158,7 +162,23 @@
     <!-- Boostrap Icons-->
     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-envelope" viewBox="0 0 16 16">
       <path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4Zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1H2Zm13 2.383-4.708 2.825L15 11.105V5.383Zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741ZM1 11.105l4.708-2.897L1 5.383v5.722Z"/>
-    </svg>
+    </svg> 
+
+    <!-- AOS CDN -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      once: true,
+    });
+  </script> 
+
+  <!-- GSAP CDN -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.1/gsap.min.js"></script> 
+    <script>
+      gsap.from('.jumbotron img', { duration: 2, y: '-100%', opacity: 0, ease: 'back'});
+      gsap.from('.navbar', { duration: 1.5, y: '-100%', opacity: 0, ease: 'back'});
+      gsap.from('.display-4', { duration: 1.1, y: '-100%', opacity: 0, ease: 'back'});
+    </script>
 
   </body>
 </html>
